@@ -12,7 +12,7 @@ div#parent {
   background: beige;
   width: 66.667%;
   height: 66.667%;
-  font-size: 16.667vh;
+  font-size: 10vh;
 }
 div#dragbox {
   position: absolute;
@@ -30,7 +30,16 @@ div#percent {
   background-color: darkred;
 }
 
+p {
+  margin: 0;
+}
+
+#parent > p {
+  position: absolute;
+  bottom: 0;
+  right: 16px;
+}
+
 #percent p {
   color: #fff;
-  margin: 0;
 }

@@ -2,8 +2,8 @@
   const parent = document.getElementById("parent");
   const parentP = document.querySelector("#parent > p");
   const percentP = document.querySelector("#parent div p");
-  console.log("parentP:", parentP);
   const { x: parentX, y: parentY } = parent.getBoundingClientRect();
+  
   const dragbox = document.getElementById("dragbox");
   const body = document.body;
 
@@ -16,8 +16,6 @@
     var clickY = event.pageY;
     var startX = target.offsetLeft;
     var startY = target.offsetTop;
-
-    console.log("width:", width, "height:", height);
 
     body.onmousemove = ontouchmove = drag;
     body.onmouseup = ontouchend = stopDrag;
@@ -32,11 +30,6 @@
       let fontSize = Math.round(parentHeight / 4) + "px";
       parent.style.width = left + width + 1 + "px";
       parent.style.height = parentHeight + "px";
-      parent.style.fontSize = fontSize;
-      parentP.innerText = "Parent " + fontSize;
-
-      fontSize = getComputedStyle(percentP).fontSize;
-      percentP.innerText = "50% = " + fontSize;
     }
 
     function stopDrag(event) {
