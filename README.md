@@ -1,2 +1,2 @@
-# [percent](https://dciforks.github.io/percent/)
+# [percent](https://funforks.github.io/percent/)
 ^^^ Click for preview
